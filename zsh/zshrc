@@ -1,5 +1,7 @@
 export ZSH=$HOME/.zsh
 
+setopt share_history
+setopt hist_ignore_space
 setopt ignoreeof
 setopt auto_cd
 setopt multios
@@ -7,6 +9,7 @@ setopt prompt_subst
 
 autoload -U colors && colors
 source $ZSH/git.zsh
+source $ZSH/completion.zsh
 source $ZSH/tarcadia.zsh-theme
 
 if [ -x /usr/bin/dircolors ]; then
