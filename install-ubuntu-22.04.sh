@@ -12,3 +12,4 @@ cp $PSD/zsh/theme/tarcadia.zsh-theme ~/.zsh/tarcadia.zsh-theme
 cp $PSD/zsh/zshrc ~/.zshrc
 
 cp $PSD/git/gitconfig ~/.gitconfig
+cp $PSD/screen/screenrc ~/.screenrc
