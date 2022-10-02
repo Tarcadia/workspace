@@ -10,3 +10,4 @@ cp $PSD/zsh/oh-my-zsh/lib/git.zsh ~/.zsh/git.zsh
 cp $PSD/zsh/theme/tarcadia.zsh-theme ~/.zsh/tarcadia.zsh-theme
 cp $PSD/zsh/zshrc ~/.zshrc
 
+cp $PSD/git/gitconfig ~/.gitconfig
