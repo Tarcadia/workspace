@@ -1,0 +1,12 @@
+# General settings
+vbell on
+vbell_msg '!Bell!'
+autodetach on
+startup_message off
+defscrollback 65536
+
+# Termcapinfo for xterm
+termcapinfo xterm* ti@:te@
+
+bind q detach
+bind ^q detach 
