@@ -11,7 +11,5 @@ setopt ignoreeof
 alias zshconfig="mate ~/.zshrc"
 alias please='sudo -E'
 
-echo '========================================================================' | lolcat
 figlet -f slant Hello Tarcadia! | lolcat
-echo '========================================================================' | lolcat
 
