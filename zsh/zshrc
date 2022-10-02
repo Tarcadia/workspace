@@ -1,0 +1,22 @@
+export ZSH=$HOME/.zsh
+
+source $ZSH/git.zsh
+source $ZSH/theme-and-appearance.zsh
+source $ZSH/tarcadia.zsh-theme
+
+. /etc/zsh_command_not_found
+
+setopt ignoreeof
+
+alias zshconfig="mate ~/.zshrc"
+alias ohmyzsh="mate ~/.oh-my-zsh"
+alias please='sudo -E'
+
+echo '========================================================================' | lolcat
+echo
+screenfetch
+echo
+echo '========================================================================' | lolcat
+figlet -f slant Hello Tarcadia! | lolcat
+echo '========================================================================' | lolcat
+
