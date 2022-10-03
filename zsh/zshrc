@@ -19,6 +19,9 @@ source $ZSH/git.zsh
 source $ZSH/completion.zsh
 source $ZSH/tarcadia.zsh-theme
 
+alias ls=' ls'
+alias cd=' cd'
+
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
