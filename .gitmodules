@@ -7,3 +7,6 @@
 [submodule "node-server/frp"]
 	path = node-server/frp
 	url = https://github.com/fatedier/frp.git
+[submodule "node-server/dynascii"]
+	path = node-server/dynascii
+	url = git@github.com:Tarcadia/Dynascii.git
