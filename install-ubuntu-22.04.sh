@@ -15,3 +15,9 @@ cp $PSD/zsh/zshrc ~/.zshrc
 
 cp $PSD/git/gitconfig ~/.gitconfig
 cp $PSD/screen/screenrc ~/.screenrc
+
+sudo chmod a-x /etc/update-motd.d/10-help-text
+sudo chmod a-x /etc/update-motd.d/50-motd-news
+sudo chmod a-x /etc/update-motd.d/50-landscape-sysinfo
+sudo chmod a-x /etc/update-motd.d/80-livepatch
+sudo cp $PSD/motd/motd /etc/update-motd.d/50-screenfetch-sysinfo
