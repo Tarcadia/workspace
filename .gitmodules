@@ -1,0 +1,6 @@
+[submodule "zsh/theme"]
+	path = zsh/theme
+	url = git@github.com:Tarcadia/tarcadia-zsh-theme.git
+[submodule "zsh/oh-my-zsh"]
+	path = zsh/oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
