@@ -33,8 +33,9 @@ if command diff --color /dev/null /dev/null &>/dev/null; then
   alias diff='diff --color'
 fi
 
-alias ll='ls -alF'
-alias la='ls -A'
+alias lsa='ls -la'
+alias la='ls -lAhCF'
+alias ll='ls -lhCF'
 alias l='ls -CF'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias zshconfig="mate ~/.zshrc"
