@@ -12,6 +12,7 @@ setopt ignoreeof
 setopt auto_cd
 setopt multios
 setopt prompt_subst
+setopt no_nomatch
 
 autoload -U colors && colors
 source $ZSH/git.zsh
