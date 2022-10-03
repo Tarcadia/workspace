@@ -4,3 +4,6 @@
 [submodule "zsh/oh-my-zsh"]
 	path = zsh/oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule "node-server/frp"]
+	path = node-server/frp
+	url = https://github.com/fatedier/frp.git
