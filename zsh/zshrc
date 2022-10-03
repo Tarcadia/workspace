@@ -1,4 +1,5 @@
 export ZSH=$HOME/.zsh
+export PATH="$PATH:$HOME/.local/bin"
 
 setopt share_history
 setopt hist_ignore_space
