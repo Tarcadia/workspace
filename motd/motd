@@ -1,0 +1,15 @@
+#!/bin/sh
+
+stamp="/var/lib/motd.cache"
+NEED_UPDATE="FALSE"
+[ -z "$(find "$stamp" -newermt 'now-1 minutes' 2> /dev/null)" ] && NEED_UPDATE="TRUE"
+
+if [ "$NEED_UPDATE" = "TRUE" ]; then
+    printf "\n%s\n\n%s\n" \
+        "$(screenfetch)" \
+        "$(/usr/bin/landscape-sysinfo --sysinfo-plugins=Network)" \
+        > "$stamp"
+fi
+
+[ ! -r "$stamp" ] || cat "$stamp"
+
