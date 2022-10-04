@@ -1,4 +1,7 @@
 PSD=$(pwd)"/"$(dirname $0)
+if ! [ -d $PSD/bk ]; then
+	mkdir $PSD/bk
+fi
 
 sudo apt install zsh command-not-found
 sudo chsh -s $(which zsh)
@@ -6,7 +9,14 @@ sudo chsh -s $(which zsh)
 sudo apt install screenfetch lolcat figlet cowsay fortune-mod sl
 
 if [ -d ~/.zsh ]; then
+	echo " - Backing up zsh confilg folder."
+	cp -r ~/.zsh $PSD/bk/
+else
 	mkdir ~/.zsh
+fi
+if [ -e ~/.zsh ]; then
+	echo " - Backing up zshrc."
+	cp -r ~/.zshrc $PSD/bk/
 fi
 cp $PSD/zsh/oh-my-zsh/lib/completion.zsh ~/.zsh/completion.zsh
 cp $PSD/zsh/oh-my-zsh/lib/git.zsh ~/.zsh/git.zsh
