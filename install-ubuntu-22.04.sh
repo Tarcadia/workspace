@@ -72,7 +72,7 @@ install_frp() {
 	elif [ $(uname -p) == "aarch64" ]; then
 		curl -o /tmp/frp.tar.gz -J https://github.com/fatedier/frp/releases/download/v${VERSION}/frp_${VERSION}_linux_arm64.tar.gz
 	fi
-	if [ -e $HOME/FRP-${VERSION} ]; else
+	if [ -e $HOME/FRP-${VERSION} ]; then : else
 		mkdir $HOME/FRP-${VERSION}
 	fi
 	tar -zxvf /tmp/frp.tar.gz -C $HOME/FRP-${VERSION}/
