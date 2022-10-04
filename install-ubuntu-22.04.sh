@@ -91,5 +91,17 @@ install_frp() {
 	sudo systemctl enable frps.service
 }
 
+install_node_server() {
+	install_frp
+}
+
+install_all() {
+	install_soft
+	install_zsh
+	install_config
+	install_motd
+	install_node_server
+}
+
 F="install_$1"
 $F
