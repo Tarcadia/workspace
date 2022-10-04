@@ -1,13 +1,13 @@
 PSD=$(pwd)"/"$(dirname $0)
 
 # install preferred softs.
-function install_soft() {
+install_soft() {
 	echo "Installing cowsay, firtune-mod, sl, screenfetch, zsh."
 	sudo apt-get -qq install cowsay fortune-mod sl > /dev/null
 }
 
 # install zsh and theme
-function install_zsh() {
+install_zsh() {
 	if ! [ -d $PSD/bk ]; then
 		mkdir $PSD/bk
 	fi
@@ -35,7 +35,7 @@ function install_zsh() {
 }
 
 # install gitconfig and screenrc
-function install_config() {
+install_config() {
 	echo "Installing gitconfig."
 	cp $PSD/git/gitconfig ~/.gitconfig
 	echo "Installing screenrc."
@@ -43,7 +43,7 @@ function install_config() {
 }
 
 # install MOTD
-function install_motd() {
+install_motd() {
 	sudo apt-get -qq install screenfetch > /dev/null
 	echo "Installing MOTD."
 	echo " - Disabling unexpected MOTD."
@@ -59,7 +59,7 @@ function install_motd() {
 # install node server apps
 
 # install FRP
-function install_frp() {
+install_frp() {
 	echo "Installing FRP."
 	echo " - Downloading FRP."
 	VERSION="0.44.0"
