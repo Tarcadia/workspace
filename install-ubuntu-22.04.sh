@@ -30,9 +30,10 @@ cp $PSD/zsh/oh-my-zsh/lib/git.zsh ~/.zsh/git.zsh
 cp $PSD/zsh/theme/tarcadia.zsh-theme ~/.zsh/tarcadia.zsh-theme
 cp $PSD/zsh/zshrc ~/.zshrc
 
-# install gitconfig
+# install gitconfig and screenrc
 echo "Installing gitconfig."
 cp $PSD/git/gitconfig ~/.gitconfig
+echo "Installing screenrc."
 cp $PSD/screen/screenrc ~/.screenrc
 
 # install MOTD
