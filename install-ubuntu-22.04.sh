@@ -89,10 +89,38 @@ install_frp() {
 	sudo cp $PSD/node-server/frps.service /usr/lib/systemd/system/
 	sudo systemctl start frps.service
 	sudo systemctl enable frps.service
+
+	echo " - UFW-ing FRP."
+	sudo ufw allow 7700
+}
+
+install_ufwrule() {
+	echo "Installing UFW Rules."
+	echo " - Allowing tcp on 22, 23."
+	sudo ufw allow 22/tcp
+	sudo ufw allow 23/tcp
+	echo " - Allowing FRP on 7700."
+	sudo ufw allow 7700
+	echo " - Allowing any on 6000:6999."
+	sudo ufw allow 6000:6999/tcp
+	sudo ufw allow 6000:6999/udp
+	echo " - Allowing tcp on 60000:65535."
+	sudo ufw allow 60000:65535/tcp
+	echo " - Allowing terraria tcp on 7777, 17777, 27777, 37777."
+	sudo ufw allow 7777/tcp
+	sudo ufw allow 17777/tcp
+	sudo ufw allow 27777/tcp
+	sudo ufw allow 37777/tcp
+	echo " - Allowing minecraft tcp on 25565, 63456."
+	sudo ufw allow 25565/tcp
+	sudo ufw allow 63456/tcp
+	echo " - Enabling UFW."
+	sudo ufw enable
 }
 
 install_node_server() {
 	install_frp
+	install_ufwrule
 }
 
 install_all() {
