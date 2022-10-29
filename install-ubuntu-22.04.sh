@@ -13,7 +13,7 @@ install_zsh() {
 	fi
 	echo "Installing zsh, theme and supports."
 	sudo apt-get -qq install zsh command-not-found > /dev/null
-	sudo chsh -s $(which zsh)
+	chsh -s $(which zsh)
 
 	if [ -d ~/.zsh ]; then
 		echo " - Backing up zsh confilg folder."
